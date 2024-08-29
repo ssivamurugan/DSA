@@ -1,4 +1,4 @@
-package ArraysTopic;
+package ArraysTopic.Sort;
 
 import java.util.Arrays;
 
