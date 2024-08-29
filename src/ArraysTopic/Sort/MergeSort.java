@@ -25,8 +25,7 @@ public class MergeSort {
                 arr[k] = lhs[i];
                 i++;
                 k++;
-            }
-            if(rhs[j]<lhs[i]){
+            }else{
                 arr[k] = rhs[j];
                 j++;
                 k++;
@@ -45,7 +44,7 @@ public class MergeSort {
         return arr;
     }
     private static int[] helper(int[] arr, int start, int end) {
-        int size = start + end;
+        int size = end-start;
         int count = 0;
         int[] arr1 = new int[size];
         while(count<size){
