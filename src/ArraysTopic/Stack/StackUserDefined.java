@@ -12,15 +12,11 @@ public class StackUserDefined {
     }
     // To check array is Full (to avoid array index outoff bound)
     public boolean isFull(){
-        if(top == (maxSize - 1))
-            return true;
-        return false;
+        return top == (maxSize - 1);
     }
     // To check array is Empty (to avoid array index outoff bound)
     public boolean isEmpty(){
-        if(top == -1)
-            return true;
-        return false;
+        return top == -1;
     }
     public void push(int ele){
         if(isFull())
