@@ -35,7 +35,7 @@ public class StackUserDefined<T> {
             top--;
         }
     }
-    public int peek(){
+    public T peek(){
         return stack[top];
     }
     public static void main(String[] args){
@@ -43,7 +43,7 @@ public class StackUserDefined<T> {
         stack.push(5);
         stack.push(99);
         stack.push(61);
-        stack.push(34);
+        stack.push(55);
         System.out.println(stack.peek());
         stack.pop();
         System.out.println(stack.peek());
