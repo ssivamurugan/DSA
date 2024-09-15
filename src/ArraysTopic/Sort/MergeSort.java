@@ -4,9 +4,11 @@ public class MergeSort {
     public static void main(String[] args){
         int[] arr = {33, 7, 1, 99, 36, 12};
         int[] ans = mergeSort(arr);
+        System.out.print("[");
         for(int a : ans){
-            System.out.println(a);
+            System.out.print(a+", ");
         }
+        System.out.print("]");
     }
 
     private static int[] mergeSort(int[] arr) {
