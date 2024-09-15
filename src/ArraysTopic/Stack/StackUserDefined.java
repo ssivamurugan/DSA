@@ -1,14 +1,15 @@
 package ArraysTopic.Stack;
 
-public class StackUserDefined {
-    private int[] stack;
+
+public class StackUserDefined<T> {
+    private T[] stack;
     private int maxSize;
     private int top;
     // To initialize array stack
     StackUserDefined(int maxSize){
         this.maxSize = maxSize;
         this.top = -1;
-        this.stack = new int[maxSize];
+        this.stack =(T[]) new Object[maxSize];
     }
     // To check array is Full (to avoid array index outoff bound)
     public boolean isFull(){
@@ -18,7 +19,7 @@ public class StackUserDefined {
     public boolean isEmpty(){
         return top == -1;
     }
-    public void push(int ele){
+    public void push(T ele){
         if(isFull())
             System.out.println("Stack is Full...");
         else{
@@ -38,7 +39,7 @@ public class StackUserDefined {
         return stack[top];
     }
     public static void main(String[] args){
-        StackUserDefined stack = new StackUserDefined(5);
+        StackUserDefined<Integer> stack = new StackUserDefined<>(5);
         stack.push(5);
         stack.push(99);
         stack.push(61);
