@@ -4,55 +4,51 @@ public class StackUserDefined {
     private int[] stack;
     private int maxSize;
     private int top;
-
     // To initialize array stack
     StackUserDefined(int maxSize){
         this.maxSize = maxSize;
-        this.top = 0;
+        this.top = -1;
         this.stack = new int[maxSize];
     }
-
-    // To check if array is full (to avoid array index out of bounds)
+    // To check array is Full (to avoid array index outoff bound)
     public boolean isFull(){
-        return top == maxSize;
+        if(top == (maxSize - 1))
+            return true;
+        return false;
     }
-
-    // To check if array is empty (to avoid array index out of bounds)
+    // To check array is Empty (to avoid array index outoff bound)
     public boolean isEmpty(){
-        return top == 0;
+        if(top == -1)
+            return true;
+        return false;
     }
-
     public void push(int ele){
         if(isFull())
             System.out.println("Stack is Full...");
         else{
-            stack[top] = ele;
             top++;
+            stack[top] = ele;
         }
     }
-
     public void pop(){
         if(isEmpty())
-            System.out.println("Stack is Empty, So unable to delete...");
+            System.out.println("Stack is Emepty, So unable to delete...");
         else{
-            top--;
             System.out.println(stack[top] + " was deleted...");
+            top--;
         }
     }
-
     public int peek(){
-        if(isEmpty())
-            throw new RuntimeException("Stack is empty");
-        return stack[top - 1];
+        return stack[top];
     }
-
     public static void main(String[] args){
         StackUserDefined stack = new StackUserDefined(5);
         stack.push(5);
         stack.push(99);
         stack.push(61);
         stack.push(34);
-        stack.push(27);
+        System.out.println(stack.peek());
+        stack.pop();
         System.out.println(stack.peek());
     }
 }
