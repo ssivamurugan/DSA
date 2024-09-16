@@ -2,7 +2,7 @@ package LinkedListUserdefined;
 
 public class LLmain {
     public static void main(String[] args){
-        LL ll = new LL();
+        LL<Integer> ll = new LL<>();
         ll.insert(7);
         ll.insert(3);
         ll.insert(9);
